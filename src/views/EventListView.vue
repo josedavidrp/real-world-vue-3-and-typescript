@@ -1,38 +1,62 @@
-<script setup>
+<script lang="ts">
+import { defineComponent, ref, onMounted, watch, computed } from 'vue'
 import EventCard from '@/components/EventCard.vue'
-import { ref, onMounted, watch, computed } from 'vue'
-import EventService from '@/services/EventService.js'
+import EventService from '@/services/EventService'
 import { useRouter } from 'vue-router'
 
-const props = defineProps(['page'])
-const events = ref(null)
-const totalEvents = ref(0)
-const totalPages = ref(0)
-const hasNextPage = computed(() => {
-  return props.page < totalPages.value
-})
-const router = useRouter()
-const fetchEvents = () => {
-  EventService.getEvents(3, props.page)
-    .then((response) => {
-      events.value = response.data
-      totalEvents.value = response.headers['x-total-count']
-      totalPages.value = Math.ceil(totalEvents.value / 3)
-    })
-    .catch(() => {
-      router.push({ name: 'NetworkError' })
-    })
-}
-onMounted(() => {
-  fetchEvents()
-})
-watch(
-  () => props.page,
-  () => {
-    events.value = null
-    fetchEvents()
+export default defineComponent({
+  name: 'EventListView',
+  components: {
+    EventCard,
   },
-)
+  props: {
+    page: {
+      type: Number,
+      required: true,
+    },
+  },
+  setup(props) {
+    const events = ref(null)
+    const totalEvents = ref(0)
+    const totalPages = ref(0)
+
+    const hasNextPage = computed(() => {
+      return props.page < totalPages.value
+    })
+
+    const router = useRouter()
+
+    const fetchEvents = () => {
+      EventService.getEvents(3, props.page)
+        .then((response) => {
+          events.value = response.data
+          totalEvents.value = parseInt(response.headers['x-total-count'])
+          totalPages.value = Math.ceil(totalEvents.value / 3)
+        })
+        .catch(() => {
+          router.push({ name: 'NetworkError' })
+        })
+    }
+
+    onMounted(() => {
+      fetchEvents()
+    })
+
+    watch(
+      () => props.page,
+      () => {
+        events.value = null
+        fetchEvents()
+      },
+    )
+
+    return {
+      events,
+      totalPages,
+      hasNextPage,
+    }
+  },
+})
 </script>
 
 <template>

@@ -1,8 +1,12 @@
-<script setup>
-defineProps({
-  event: {
-    type: Object,
-    required: true,
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'EventCard',
+  props: {
+    event: {
+      type: Object,
+      required: true,
+    },
   },
 })
 </script>
