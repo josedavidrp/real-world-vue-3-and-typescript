@@ -1,0 +1,204 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "category": "fiestas",
+      "title": "Mascletà en la Plaza del Ayuntamiento",
+      "description": "Espectáculo pirotécnico diario durante las Fallas.",
+      "location": "Plaza del Ayuntamiento, Valencia",
+      "date": "Marzo 10, 2025",
+      "time": "14:00",
+      "organizer": "Junta Central Fallera"
+    },
+    {
+      "id": 2,
+      "category": "cultura",
+      "title": "Visita guiada a la Lonja de la Seda",
+      "description": "Descubre la historia de este edificio Patrimonio de la Humanidad.",
+      "location": "Lonja de la Seda, Valencia",
+      "date": "Febrero 15, 2025",
+      "time": "11:00",
+      "organizer": "Oficina de Turismo de Valencia"
+    },
+    {
+      "id": 3,
+      "category": "fiestas",
+      "title": "Plantà de las Fallas",
+      "description": "Colocación de los monumentos falleros por toda la ciudad.",
+      "location": "Diversas ubicaciones en Valencia",
+      "date": "Marzo 15, 2025",
+      "time": "08:00",
+      "organizer": "Comisiones Falleras"
+    },
+    {
+      "id": 4,
+      "category": "música",
+      "title": "Concierto en la Ciudad de las Artes",
+      "description": "Música en directo con artistas locales.",
+      "location": "Ciudad de las Artes y las Ciencias",
+      "date": "Julio 5, 2025",
+      "time": "21:00",
+      "organizer": "Ajuntament de València"
+    },
+    {
+      "id": 5,
+      "category": "gastronomía",
+      "title": "Feria de la Tapa Valenciana",
+      "description": "Degustación de tapas y platos típicos de la región.",
+      "location": "Jardín del Turia",
+      "date": "Junio 10, 2025",
+      "time": "12:00",
+      "organizer": "Turisme Comunitat Valenciana"
+    },
+    {
+      "id": 6,
+      "category": "historia",
+      "title": "Noche en el Museo de Bellas Artes",
+      "description": "Entrada gratuita y visitas guiadas nocturnas.",
+      "location": "Museo de Bellas Artes de Valencia",
+      "date": "Mayo 18, 2025",
+      "time": "19:00",
+      "organizer": "Generalitat Valenciana"
+    },
+    {
+      "id": 7,
+      "category": "medio ambiente",
+      "title": "Limpieza del Parque Natural de la Albufera",
+      "description": "Actividad voluntaria para cuidar uno de los parajes más emblemáticos.",
+      "location": "Parque Natural de la Albufera",
+      "date": "Abril 22, 2025",
+      "time": "09:00",
+      "organizer": "Associació Ecologista Valenciana"
+    },
+    {
+      "id": 8,
+      "category": "deporte",
+      "title": "Carrera Popular de Valencia",
+      "description": "Una cita deportiva abierta a todas las edades.",
+      "location": "Avenida del Puerto",
+      "date": "Octubre 5, 2025",
+      "time": "10:00",
+      "organizer": "Valencia Ciudad del Running"
+    },
+    {
+      "id": 9,
+      "category": "gastronomía",
+      "title": "Día Mundial de la Paella",
+      "description": "Cocineros de todo el mundo celebran el plato más famoso de Valencia.",
+      "location": "Plaza del Ayuntamiento",
+      "date": "Septiembre 20, 2025",
+      "time": "13:00",
+      "organizer": "World Paella Day"
+    },
+    {
+      "id": 10,
+      "category": "artesanía",
+      "title": "Mercado de Artesanía Fallera",
+      "description": "Exposición y venta de trajes, flores y ornamentos tradicionales.",
+      "location": "Calle de las Barcas",
+      "date": "Febrero 28, 2025",
+      "time": "10:00",
+      "organizer": "Gremio de Artistas Falleros"
+    },
+    {
+      "id": 11,
+      "category": "religión",
+      "title": "Procesión de la Virgen de los Desamparados",
+      "description": "Celebración religiosa dedicada a la patrona de Valencia.",
+      "location": "Centro Histórico",
+      "date": "Mayo 11, 2025",
+      "time": "18:00",
+      "organizer": "Catedral de Valencia"
+    },
+    {
+      "id": 12,
+      "category": "cultura",
+      "title": "Festival de Cine de Valencia - Cinema Jove",
+      "description": "Proyección de películas de jóvenes cineastas.",
+      "location": "Teatro Principal de Valencia",
+      "date": "Junio 22, 2025",
+      "time": "20:00",
+      "organizer": "Institut Valencià de Cultura"
+    },
+    {
+      "id": 13,
+      "category": "infantil",
+      "title": "Taller infantil en el Museo de Ciencias",
+      "description": "Actividades educativas para niños y niñas.",
+      "location": "Museo de las Ciencias Príncipe Felipe",
+      "date": "Abril 6, 2025",
+      "time": "11:00",
+      "organizer": "Ciudad de las Artes y las Ciencias"
+    },
+    {
+      "id": 14,
+      "category": "gastronomía",
+      "title": "Ruta de la Horchata",
+      "description": "Descubre los mejores locales para probar horchata de chufa.",
+      "location": "Alboraya",
+      "date": "Agosto 12, 2025",
+      "time": "17:00",
+      "organizer": "Consejo Regulador de la Chufa de Valencia"
+    },
+    {
+      "id": 15,
+      "category": "arte",
+      "title": "Exposición de Sorolla",
+      "description": "Obras del pintor valenciano en su ciudad natal.",
+      "location": "Museo de Bellas Artes de Valencia",
+      "date": "Marzo 1, 2025",
+      "time": "10:00",
+      "organizer": "Fundación Museo Sorolla"
+    },
+    {
+      "id": 16,
+      "category": "tradición",
+      "title": "Nit del Foc",
+      "description": "Gran castillo de fuegos artificiales la víspera de San José.",
+      "location": "Antiguo cauce del río Turia",
+      "date": "Marzo 18, 2025",
+      "time": "01:00",
+      "organizer": "Junta Central Fallera"
+    },
+    {
+      "id": 17,
+      "category": "historia",
+      "title": "Ruta Histórica por el Carmen",
+      "description": "Recorrido por el barrio más antiguo de Valencia.",
+      "location": "Barrio del Carmen",
+      "date": "Abril 2, 2025",
+      "time": "17:00",
+      "organizer": "Valencia History Tour"
+    },
+    {
+      "id": 18,
+      "category": "teatro",
+      "title": "Obra en el Teatro Olympia",
+      "description": "Comedia contemporánea en uno de los teatros más emblemáticos.",
+      "location": "Teatro Olympia, Valencia",
+      "date": "Octubre 20, 2025",
+      "time": "20:30",
+      "organizer": "Teatro Olympia"
+    },
+    {
+      "id": 19,
+      "category": "naturaleza",
+      "title": "Paseo en barca por la Albufera",
+      "description": "Disfruta del atardecer en este entorno natural único.",
+      "location": "El Palmar, Valencia",
+      "date": "Mayo 8, 2025",
+      "time": "19:00",
+      "organizer": "Barqueros del Palmar"
+    },
+    {
+      "id": 20,
+      "category": "cultura",
+      "title": "Festival Internacional de Música Antigua",
+      "description": "Conciertos con instrumentos históricos en espacios emblemáticos.",
+      "location": "Iglesia de San Nicolás",
+      "date": "Noviembre 10, 2025",
+      "time": "19:30",
+      "organizer": "Capella de Ministrers"
+    }
+  ]
+}
