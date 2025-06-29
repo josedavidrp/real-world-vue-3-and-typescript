@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventListView from '@/views/EventListView.vue'
-import EventLayout from '@/views/event/Layout.vue'
+import EventLayout from '@/views/event/EventLayout.vue'
 import NotFound from '@/views/NotFound.vue'
 import NetworkError from '@/views/NetworkError.vue'
 
@@ -9,8 +9,8 @@ const AboutView = () => import(/* webpackChunkName: "about" */ '@/views/AboutVie
 const EventDetails = () =>
   import(/* webpackChunkName: "EventDetails" */ '@/views/event/Details.vue')
 const EventRegister = () =>
-  import(/* webpackChunkName: "EventDetails" */ '@/views/event/Register.vue')
-const EventEdit = () => import(/* webpackChunkName: "EventDetails" */ '@/views/event/Edit.vue')
+  import(/* webpackChunkName: "EventDetails" */ '@/views/event/RegisterView.vue')
+const EventEdit = () => import(/* webpackChunkName: "EventDetails" */ '@/views/event/EditView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
