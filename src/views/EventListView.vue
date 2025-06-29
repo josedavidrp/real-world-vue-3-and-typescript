@@ -3,7 +3,7 @@ import { defineComponent, ref, onMounted, watch, computed } from 'vue'
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService'
 import { useRouter } from 'vue-router'
-
+import { EventItem } from '@/types'
 export default defineComponent({
   name: 'EventListView',
   components: {
@@ -16,7 +16,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const events = ref(null)
+    const events = ref<EventItem[]>([])
     const totalEvents = ref(0)
     const totalPages = ref(0)
 
@@ -45,7 +45,7 @@ export default defineComponent({
     watch(
       () => props.page,
       () => {
-        events.value = null
+        events.value = []
         fetchEvents()
       },
     )

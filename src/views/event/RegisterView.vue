@@ -1,10 +1,12 @@
 <script lang="ts">
 import { useRouter } from 'vue-router'
 import { defineComponent, inject } from 'vue'
+
 export default defineComponent({
   name: 'RegisterView',
   props: {
     event: {
+      type: Object,
       required: true,
     },
   },
