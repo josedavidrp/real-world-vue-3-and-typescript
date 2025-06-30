@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, ref, onMounted, watch, computed } from 'vue'
+import { defineComponent, ref, onMounted, watch, computed, reactive, toRefs } from 'vue'
 import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService'
 import { useRouter } from 'vue-router'
@@ -16,12 +16,14 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const events = ref<EventItem[]>([])
-    const totalEvents = ref(0)
-    const totalPages = ref(0)
+    const state = reactive({
+      events: [] as EventItem[],
+      totalEvents: 0,
+      totalPages: 0,
+    })
 
     const hasNextPage = computed(() => {
-      return props.page < totalPages.value
+      return props.page < state.totalPages
     })
 
     const router = useRouter()
@@ -29,9 +31,9 @@ export default defineComponent({
     const fetchEvents = () => {
       EventService.getEvents(3, props.page)
         .then((response) => {
-          events.value = response.data
-          totalEvents.value = parseInt(response.headers['x-total-count'])
-          totalPages.value = Math.ceil(totalEvents.value / 3)
+          state.events = response.data
+          state.totalEvents = parseInt(response.headers['x-total-count'])
+          state.totalPages = Math.ceil(state.totalEvents / 3)
         })
         .catch(() => {
           router.push({ name: 'NetworkError' })
@@ -45,14 +47,13 @@ export default defineComponent({
     watch(
       () => props.page,
       () => {
-        events.value = []
+        state.events = []
         fetchEvents()
       },
     )
 
     return {
-      events,
-      totalPages,
+      ...toRefs(state),
       hasNextPage,
     }
   },
