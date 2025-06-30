@@ -1,12 +1,13 @@
 <script lang="ts">
 import { useRouter } from 'vue-router'
-import { defineComponent, inject } from 'vue'
+import { defineComponent, inject, PropType } from 'vue'
+import { EventItem } from '@/types'
 
 export default defineComponent({
   name: 'RegisterView',
   props: {
     event: {
-      type: Object,
+      type: Object as PropType<EventItem>,
       required: true,
     },
   },

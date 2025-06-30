@@ -1,9 +1,11 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { EventItem } from '@/types'
+import { defineComponent, PropType } from 'vue'
 export default defineComponent({
   name: 'EditView',
   props: {
     event: {
+      type: Object as PropType<EventItem>,
       required: true,
     },
   },
